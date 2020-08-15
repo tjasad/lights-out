@@ -7,13 +7,13 @@ The lights out game is represented as a matrix of 0 (light out)
 and 1(light on). The objective in this implemetation of the
 game is to get all the lights to be on.
 
-##Create a new player
+## Create a new player
 To create a new player you need to post the age and username
 of the player.
-##Create a new problem
+## Create a new problem
 To create a new problem you need to post players ID and 
 the definition of the problem as a string.<br/>
-####Definition format 
+#### Definition format 
 For the problem:<br/>
 ```
 0 0 1 1 
@@ -27,11 +27,11 @@ The corresponding <b>definition</b> would be:<br/>
 ```
 
 When the problem is submitted, it is checked for solveability.
-##Creating a new solution
+## Creating a new solution
 To create a new solution you need to post
 the player ID, problem ID to which the solution
 reefers to and the steps needed to solve the problem.
-####Steps format 
+#### Steps format 
 A step is represented as a number from 1 to n x n, where
 n is the size of the matrix.
 
@@ -44,9 +44,9 @@ Matrix 3x3 with steps:
 7 8 9
 ```
 
-##Starting the project
+## Starting the project
 
-###1. Database
+### 1. Database
 Run:
 ```
 docker run --name postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:alpine
@@ -55,7 +55,7 @@ In application.properties override quarkus.datasource.url to the
 docker container url. Depending on if you use docker toolbox or 
 docker on the local machine.
    
-###2. Application
+### 2. Application
 
 ```
 .\mvnw package
